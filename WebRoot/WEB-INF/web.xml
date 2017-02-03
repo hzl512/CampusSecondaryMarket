@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!--开发者QQ：2390201971 -->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Buys -->
+	<servlet>
+		<description>Buys操作</description>
+		<display-name>Buys操作</display-name>
+		<servlet-name>BuysServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.BuysServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuysServlet</servlet-name>
+		<url-pattern>/BuysServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Category -->
+	<servlet>
+		<description>Category操作</description>
+		<display-name>Category操作</display-name>
+		<servlet-name>CategoryServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.CategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CategoryServlet</servlet-name>
+		<url-pattern>/CategoryServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Commodity -->
+	<servlet>
+		<description>Commodity操作</description>
+		<display-name>Commodity操作</display-name>
+		<servlet-name>CommodityServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.CommodityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommodityServlet</servlet-name>
+		<url-pattern>/CommodityServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Departments -->
+	<servlet>
+		<description>Departments操作</description>
+		<display-name>Departments操作</display-name>
+		<servlet-name>DepartmentsServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.DepartmentsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DepartmentsServlet</servlet-name>
+		<url-pattern>/DepartmentsServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Manage -->
+	<servlet>
+		<description>Manage操作</description>
+		<display-name>Manage操作</display-name>
+		<servlet-name>ManageServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.ManageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ManageServlet</servlet-name>
+		<url-pattern>/ManageServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Profession -->
+	<servlet>
+		<description>Profession操作</description>
+		<display-name>Profession操作</display-name>
+		<servlet-name>ProfessionServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.ProfessionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfessionServlet</servlet-name>
+		<url-pattern>/ProfessionServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Users -->
+	<servlet>
+		<description>Users操作</description>
+		<display-name>Users操作</display-name>
+		<servlet-name>UsersServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.UsersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UsersServlet</servlet-name>
+		<url-pattern>/UsersServlet</url-pattern>
+	</servlet-mapping>
+	<!-- CommodityAddServlet -->
+	<servlet>
+		<description>CommodityAddServlet操作</description>
+		<display-name>CommodityAddServlet操作</display-name>
+		<servlet-name>CommodityAddServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.CommodityAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommodityAddServlet</servlet-name>
+		<url-pattern>/CommodityAddServlet</url-pattern>
+	</servlet-mapping>
+	<!--默认页 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

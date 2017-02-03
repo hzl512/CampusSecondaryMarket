@@ -1,0 +1,210 @@
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.weicent.web.domain.*"%>
+
+<jsp:useBean id="CommodityDao" scope="page" class="com.weicent.web.dao.CommodityDao" />
+<jsp:useBean id="CategoryDao" scope="page" class="com.weicent.web.dao.CategoryDao" />
+
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%
+	List<String> statusList=new ArrayList<String>();
+	statusList.add(0,"上架");
+	statusList.add(1,"下架");
+	statusList.add(2,"违规");
+	List<String> bargainList=new ArrayList<String>();
+	bargainList.add(0,"可小刀");
+	bargainList.add(1,"不可刀");
+	
+	ArrayList<Category> list = CategoryDao.getCategoryListAll("");
+ %>
+<html>
+	<head>
+		<title>修改商品</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+	</head>
+	<body>
+		<jsp:include page="bg_top.jsp" flush="true" />
+		<table width="1000" border="0" align="center" cellpadding="0"
+			bgcolor="#FFFFFF" cellspacing="0">
+			<tr>
+				<td width="20%" valign="top">
+				<jsp:include page="bg_left.jsp" flush="true" />
+				</td>
+				<td>
+					<table width="610" height="25" border="0" cellpadding="0"
+						align="center" cellspacing="0" background="image/bg_02.jpg">
+						<tr>
+							<td>
+								<div align="center">
+									<strong>修改商品</strong>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<form method="get" action="CommodityServlet">
+						<table width="80%" border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="CCCCCC" align="center">
+							<%
+								String id = request.getParameter("id").toString();
+								Commodity t = CommodityDao.getCommodity(id);
+							 
+								String commodityPhone = String.valueOf(t.getCommodityPhone());
+							 
+								String commodityQQ = String.valueOf(t.getCommodityQQ());
+							 
+								String commodityAddTime = t.getCommodityAddTime();
+							 
+								String commodityStatus = String.valueOf(t.getCommodityStatus());
+							 
+								String commodityViews = String.valueOf(t.getCommodityViews());
+							 
+								String usersID = String.valueOf(t.getUsersID());
+							 
+								String commodityImageUrl = t.getCommodityImageUrl();
+							 
+								String commodityName = t.getCommodityName();
+							 
+								String commodityDetail = t.getCommodityDetail();
+							 
+								String commodityAddress = t.getCommodityAddress();
+							 
+								String commodityPrice = t.getCommodityPrice();
+							 
+								String categoryID = String.valueOf(t.getCategoryID());
+							 
+								String commodityBargain = String.valueOf(t.getCommodityBargain());
+							 
+							%>
+							
+							<tr bgcolor="#FFFFFF">
+								<td align="right">商品名称：</td>
+								<td><input type="text" name="commodityName" value=<%=commodityName%> /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">商品详情：</td>
+								<td><input type="text" name="commodityDetail" value=<%=commodityDetail%> /></td>
+							</tr>
+ 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">商品图片：</td>
+								<td><input type="file" name="commodityImageUrl"  /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">交易地点：</td>
+								<td><input type="text" name="commodityAddress" value=<%=commodityAddress%> /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">价格：</td>
+								<td><input type="text" name="commodityPrice" value=<%=commodityPrice%> /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">分类：</td>
+								<td>
+									<select name="categoryID">
+										<option value="<%=categoryID%>">请选择</option>
+										<%
+											for(int i=0;i<list.size();i++){
+											Category temp = (Category) list.get(i);
+										%>
+						 				<%
+												if (categoryID.equals(String.valueOf(temp.getId()))) {
+										%>
+										<option value="<%=temp.getId()%>" selected="selected"><%=temp.getCategoryName()%> </option>
+												<%
+													}else{
+												%>
+										<option value="<%=temp.getId()%>"><%=temp.getCategoryName()%></option>
+											<%
+												}
+											%>
+										 <%
+										 }
+										 %>
+						  			</select>
+								
+								</td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">讲价：</td>
+								<td>
+									<select name="commodityBargain">
+										<option value="<%=commodityBargain%>">请选择</option>
+										<%
+											for(int i=0;i<bargainList.size();i++){
+											String s=bargainList.get(i).toString();
+										%>
+						 				<%
+												if (commodityBargain.equals(String.valueOf(i))) {
+										%>
+										<option value="<%=i%>" selected="selected"><%=s%> </option>
+												<%
+													}else{
+												%>
+										<option value="<%=i%>" ><%=s%> </option>
+											<%
+												}
+											%>
+										 <%
+										 }
+										 %>
+						  			</select>
+								</td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">联系电话：</td>
+								<td><input type="text" name="commodityPhone" value=<%=commodityPhone%> /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">QQ：</td>
+								<td><input type="text" name="commodityQQ" value=<%=commodityQQ%> /></td>
+							</tr>
+							 
+							<tr bgcolor="#FFFFFF">
+								<td align="right">状态：</td>
+								<td>
+									<select name="commodityStatus">
+										<option value="<%=commodityStatus%>">请选择</option>
+										<%
+											for(int i=0;i<statusList.size();i++){
+											String s=statusList.get(i).toString();
+										%>
+						 				<%
+												if (commodityStatus.equals(String.valueOf(i))) {
+										%>
+										<option value="<%=i%>" selected="selected"><%=s%> </option>
+												<%
+													}else{
+												%>
+										<option value="<%=i%>" ><%=s%> </option>
+											<%
+												}
+											%>
+										 <%
+										 }
+										 %>
+						  			</select>
+								</td>
+							</tr>
+							
+							<tr bgcolor="#FFFFFF">
+								<td align="right"><input type="reset" value="重填" /></td>
+								<td><input type="submit" value="确定" /></td>
+							</tr>
+						</table>
+						<input type="hidden" name="action" value="update" /> 
+						<input type="hidden" name="id" value="<%=id.trim()%>" />
+						<input type="hidden" name="usersID" value=<%=usersID%> />
+						<input type="hidden" name="imageUrl" value=<%=commodityImageUrl%> />
+						<input type="hidden" name="commodityAddTime" value=<%=commodityAddTime%> />
+						<input type="hidden" name="commodityViews" value=<%=commodityViews%> />
+					</form>
+		</table>
+	</body>
+<h4><jsp:include page="bg_bottom.jsp" flush="true" /></h4>
+</html>

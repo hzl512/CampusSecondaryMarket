@@ -1,0 +1,215 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+td {
+	font-size: 12pt;	color: #000000;
+}
+
+
+/*对管理员登录后台的超链接的样式*/
+.a1:link {    
+	COLOR: #FEAE00; TEXT-DECORATION: underline; font-size:12px;
+}
+.a1:visited {   
+	COLOR: #FEAE00; TEXT-DECORATION: underline; font-size:12px;
+}
+.a1:active {    
+	COLOR: #FEAE00; TEXT-DECORATION: underline; font-size:12px;
+}
+.a1:hover {
+	COLOR: #FEAE00; text-decoration:underline font-size:12px;
+}
+/*设置管理员登录页面的text样式*/
+.bgtext{
+	font-family: "宋体";
+	font-size: 12pt;
+	border: 1px solid #E8A10B;
+}
+/*设置管理员登录页面的按钮样式*/
+.bgButtoninput{
+	font-family: "宋体";
+	font-size: 12pt;
+	border: 0px solid #E8A10B;
+}
+/*设置后台页面中商品查询的链接样式（上半部分）*/
+.a2:link {    
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:12px;
+}
+.a2:visited {   
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:12px;
+}
+.a2:active {    
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:12px;
+}
+.a2:hover {   
+	COLOR: #FEAE00; text-decoration:none font-size:12px;
+}
+/*设置后台页面中左侧部分的超链接（上半部分）*/
+.a3:link {    
+	COLOR: #855106; TEXT-DECORATION: none; font-size:12px;
+}
+.a3:visited {   
+	COLOR: #855106; TEXT-DECORATION: none; font-size:12px;
+}
+.a3:active {    
+	COLOR: #855106; TEXT-DECORATION: none; font-size:12px;
+}
+.a3:hover {   
+	COLOR: #FF6600; text-decoration:none font-size:12px;
+}
+/*全局的超链接*/
+a:hover {
+	font-size: 12pt;	color: #FF690C;
+}
+a {
+	font-size: 12pt;	text-decoration: none;	color: #000000;
+	noline:expression(this.onfocus=this.blur);
+}
+/*将提交按钮的边框去掉*/
+.input1{
+	font-family: "宋体";
+	font-size: 12pt;
+	color: #333333;
+	border: 0px solid #999999;
+}
+/*对简体中文和繁体中文的超链接的样式*/
+.a4:link {    
+	COLOR: #FFFFFF; TEXT-DECORATION: underline; font-size:12px;
+}
+.a4:visited {   
+	COLOR: #FFFFFF; TEXT-DECORATION: none; font-size:12px;
+}
+.a4:active {    
+	COLOR: #FFFFFF; TEXT-DECORATION: none; font-size:12px;
+}
+.a4:hover {   
+	COLOR: #FFFFFF; text-decoration:underline font-size:12px;
+}
+/*进入后台的超链接的样式*/
+.a5:link {    
+	COLOR: #F0F0F0; TEXT-DECORATION: underline; font-size:12px;
+}
+.a5:visited {   
+	COLOR: #F0F0F0; TEXT-DECORATION: none; font-size:12px;
+}
+.a5:active {    
+	COLOR: #F0F0F0; TEXT-DECORATION: none; font-size:12px;
+}
+.a5:hover {   
+	COLOR: #FEAE00; text-decoration:underline font-size:12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+img{
+	border:0;
+}
+.img1{
+	border:1;
+}
+.blue {
+	font-size: 12pt;	color: #034683;
+}
+.bgcolor {
+	font-size: 12pt;	color: #1980DB;
+}
+.btn_grey {
+	font-family: "宋体";	font-size: 12pt;color: #333333;	
+	background-color: #eeeeee;cursor: hand;padding:1px;height:19px;
+	border-top: 1px solid #FFFFFF;border-right:1px solid #666666;
+	border-bottom: 1px solid #666666;border-left: 1px solid #FFFFFF;
+}
+input{
+	font-family: "宋体";
+	font-size: 12pt;
+	color: #333333;
+	border: 1px solid #999999;
+
+}
+.word_white{
+ color:#FFFFFF;
+}
+.word_deepgrey{
+ color:#999999;
+}
+.word_orange{
+ color:#FF6600;
+}
+.word_green{
+ color:#FEECEA;
+}
+.noborder{
+border:none;
+}
+.word_gray{
+ color:#dddddd;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url(../image/bg.gif)
+}
+.textarea {
+	font-family: "宋体";
+	font-size: 12pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.tableBorder {
+	border: #D8D8D8 1px solid;
+}
+.tableBorder_dashed {
+	border: #D8D8D8 1px dashed;
+}
+.tableBorder_l {
+	border: #D8D8D8 1px solid;
+	border-bottom-style:none;
+	border-left-style:none;
+	border-top-style:none;
+}
+.tableBorder_lb {
+	border: #D8D8D8 1px solid;
+	border-left-style:none;
+	border-top-style:none;
+}
+.tableBorder_l_dashed {
+	border: #D8D8D8 1px dashed;
+	border-bottom-style:none;
+	border-left-style:none;
+	border-top-style:none;
+}
+.tableBorder_T_dashed {
+	border: #D8D8D8 1px dashed;
+	border-bottom-style:none;
+	border-left-style:none;
+	border-right-style:none;
+}
+.tableBorder_LTR_dashed {
+	border: #D8D8D8 1px dashed;
+	border-bottom-style:none;
+}
+.tableBorder_B_dashed {
+	border: #D8D8D8 1px dashed;
+	border-top-style:none;
+	border-left-style:none;
+	border-right-style:none;
+}
+.hidden_a_line{
+	noline:expression(this.onfocus=this.blur);
+}
+hr{
+border-style:dashed;
+color:#CCCCCC;
+}
+-->
