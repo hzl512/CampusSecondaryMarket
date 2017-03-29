@@ -76,6 +76,18 @@
 		<url-pattern>/ProfessionServlet</url-pattern>
 	</servlet-mapping>
 
+	<!-- Update -->
+	<servlet>
+		<description>Update操作</description>
+		<display-name>Update操作</display-name>
+		<servlet-name>UpdateServlet</servlet-name>
+		<servlet-class>com.weicent.web.servlet.UpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/UpdateServlet</url-pattern>
+	</servlet-mapping>
+
 	<!-- Users -->
 	<servlet>
 		<description>Users操作</description>

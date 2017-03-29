@@ -61,4 +61,24 @@ public class UploadFile {
 		
 		return fname;
 	}
+	
+	//上传apk
+	public String upload2(String dir, File formFile) throws Exception {
+		String fname = formFile.getName();
+		InputStream streamIn = new FileInputStream(formFile); // 创建读取用户上传文件的对象
+		File uploadFile = new File(dir); // 创建把上传数据写到目标文件的对象
+		if (!uploadFile.exists() || uploadFile == null) { // 判断指定路径是否存在，不存在则创建路径
+			uploadFile.mkdirs();
+		}
+		String path = uploadFile.getPath() + "/" + fname;
+		OutputStream streamOut = new FileOutputStream(path);
+		int bytesRead = 0;
+		byte[] buffer = new byte[8192];
+		while ((bytesRead = streamIn.read(buffer, 0, 8192)) != -1) {
+			streamOut.write(buffer, 0, bytesRead);
+		}
+		streamOut.close();
+		streamIn.close();
+		return fname;
+	}
 }

@@ -190,6 +190,31 @@
 		</td>
 	</tr>
 </table>
+
+<table width="170" height="46" border="0" cellpadding="0"
+	cellspacing="0" background="image/bg_left02.jpg">
+	<tr>
+		<td>
+			<table width="118" border="0" align="center" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td width="118" height="17" align="center" valign="bottom">
+						<div align="left">
+							<a href="bg_list_update.jsp" class="a3">应用更新</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td height="17" align="center">
+						<div align="left">
+							<font color="#FFFFFF">App Update</font>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
 		
 <table width="170" height="47" border="0" cellpadding="0"
 	cellspacing="0" background="image/bg_left03.jpg">

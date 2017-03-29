@@ -19,6 +19,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,6 +36,27 @@ import java.util.regex.Pattern;
  * @date：2013-01-17 下午11:52:13
  */
 public class AbStrUtil {
+	
+    /**
+     * 描述：获取文件大小
+     *
+     * @param fileS 文件长度
+     * @return 文件大小
+     */
+    public static String FormetFileSize(long fileS) {//转换文件大小
+        DecimalFormat df = new DecimalFormat("#.00");
+        String fileSizeString = "";
+        if (fileS < 1024) {
+            fileSizeString = df.format((double) fileS) + "B";
+        } else if (fileS < 1048576) {
+            fileSizeString = df.format((double) fileS / 1024) + "K";
+        } else if (fileS < 1073741824) {
+            fileSizeString = df.format((double) fileS / 1048576) + "M";
+        } else {
+            fileSizeString = df.format((double) fileS / 1073741824) +"G";
+        }
+        return fileSizeString;
+     }
     
     /**
      * 描述：将null转化为“”.
